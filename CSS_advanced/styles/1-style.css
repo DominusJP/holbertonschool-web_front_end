@@ -1,4 +1,3 @@
 html {
-	scroll-behavior: smooth; /* This makes the scrolling behavior fluid */
-	overflow-y: scroll; /* This ensures vertical scrollbar is visible even when not scrolling */
+	scroll-behavior: smooth
 }
