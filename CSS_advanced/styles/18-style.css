@@ -42,13 +42,6 @@ template{display: none;} /* prettier-ignore */
 	--section-footer-padding: 3rem 0 0;
 	--section-footer-align: center;
 	--footer-padding: 5rem 0 1rem;
-	--nav-item-font-family: var(--font-family-title);
-	--nav-item-font-weight: var(--font-weight-bold);
-	--nav-item-font-size: var(--font-size-medium);
-	--nav-item-letter-spacing: 4%;
-	--nav-item-display: inline-block;
-	--nav-item-margin: 0 0 calc(3 * var(--root-font-size)) 0;
-	--nav-item-link-hover: var(--color-primary);
 	--section-title-margin: 0;
 	--section-title-color: var(--color-black);
 	--section-tagline-transform: uppercase;
@@ -71,34 +64,13 @@ template{display: none;} /* prettier-ignore */
 	--font-size-xx-large: 4.8rem;
 	font-weight-regular: 400;
 	font-weight-bold: 700;
-}
-
-.navbar-menu {
-	float: right;
-}
-
-.nav {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-
-.nav-item {
-	font-family: var(--nav-item-font-family);
-	font-weight: var(--nav-item-font-weight);
-	font-size: var(--nav-item-font-size);
-	letter-spacing: var(--nav-item-letter-spacing);
-	display: var(--nav-item-display);
-	margin: var(--nav-item-margin);
-}
-
-.nav-link {
-	display: block;
-	padding: calc(0.5 * var(--root-font-size)) var(--root-font-size);
-}
-
-.nav-link:hover {
-	color: var(--nav-item-link-hover);
+	--nav-item-font-family: var(--font-family-title);
+	--nav-item-font-weight: var(--font-weight-bold);
+	--nav-item-font-size: var(--font-size-medium);
+	--nav-item-letter-spacing: 4%;
+	--nav-item-display: inline-block;
+	--nav-item-margin: 3rem 0 0 0; /* 3 times the root element on the bottom, 0 elsewhere */
+	--nav-item-link-hover: var(--color-primary);
 }
 
 *,
@@ -179,6 +151,37 @@ a:active {
 
 .card-category {
 	color: var(--color-primary);
+}
+
+.navbar-menu {
+	float: right;
+}
+
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.nav .nav-item {
+	font-family: var(--nav-item-font-family);
+	font-weight: var(--nav-item-font-weight);
+	font-size: var(--nav-item-font-size);
+	letter-spacing: var(--nav-item-letter-spacing);
+	display: var(--nav-item-display);
+	margin: var(--nav-item-margin);
+}
+
+.nav .nav-item .nav-link {
+	display: block;
+	padding: calc(0.5 * var(--line-height-base)) var(--section-padding) var(--line-height-base);
+	color: var(--text-color);
+	transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav .nav-item .nav-link:hover {
+	color: var(--nav-item-link-hover);
 }
 
 body {
