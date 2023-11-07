@@ -278,14 +278,12 @@ ul.row {
 .navbar-menu {
 	float: right;
 }
-
 .nav {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	text-align: center;
 }
-
 .nav .nav-item {
 	font-family: var(--nav-item-font-family);
 	font-weight: var(--nav-item-font-weight);
@@ -294,36 +292,14 @@ ul.row {
 	display: var(--nav-item-display);
 	margin: var(--nav-item-margin);
 }
-
-.nav .nav-item .nav-link {
+.nav .nav-link {
 	display: block;
-	padding: calc(0.5 * var(--line-height-base)) var(--section-padding) var(--line-height-base);
-	color: var(--text-color);
-	transition: color 0.3s; /* Smooth color transition on hover */
+	padding: 0.5rem 1rem;
 }
-
-.nav .nav-item .nav-link:hover {
+.nav .nav-link:hover {
 	color: var(--nav-item-link-hover);
 }
 
-.nav-item-link:hover {
-	color: var(--color-white);
-}
-
-.nav-link::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: var(--color-white);
-	width: 0;
-	height: 20%;
-}
-
-.nav-item:hover .nav-link::before {
-	background-color: var(--color-primary);
-	width: 100%;
-}
 
 [data-section-theme="dark"] {
 	--text-color: var(--color-white);
