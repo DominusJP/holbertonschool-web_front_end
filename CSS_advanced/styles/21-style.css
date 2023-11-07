@@ -159,19 +159,15 @@ ul.row {
 
 [class^="col-"] {
 	float: left;
-	padding: calc(0.5 * var(--line-height-base));
+	padding: 0.5rem;
 }
 
 .col-1-3 {
 	width: 33.33%;
-	float: left;
-	padding: calc(0.5 * var(--line-height-base));
 }
 
 .col-1-2 {
 	width: 50%;
-	float: left;
-	padding: calc(0.5 * var(--line-height-base));
 }
 
 .container {
